@@ -1,15 +1,19 @@
 
 import { getCurrentlyPlaying } from '@/lib/spotify'
+import { formatTrackInfo } from '@/utils/helpers/format';
 
 export async function GET() {
+  // SPOTIFY DATA
   const currentlyPlaying = await getCurrentlyPlaying();
-  const trackInfo = await currentlyPlaying.json();
+  const isTrackPlaying = ( currentlyPlaying.status === 200 )
+  let trackInfo = {}
+
+  if ( isTrackPlaying ) {
+    trackInfo = await currentlyPlaying.json();
+  }
 
   const Updates = {
-    playing: {
-      name: trackInfo.item.name,
-      artist: trackInfo.item.artists[0].name
-    }
+    playing : isTrackPlaying ? formatTrackInfo(trackInfo) : '',
   }
 
   return Response.json( Updates );
