@@ -6,9 +6,7 @@ import React, { FC  } from 'react';
 // internal dependencies
 import { Container } from './Homepage.styles'
 import Header from '@/components/Header/Header'
-import ImageText from '@/components/ImageText/ImageText'
-import Separator from '@/components/Separator/Separator'
-import Footer from '@/components/Footer/Footer'
+import Introduction from '@/components/Introduction/Introduction'
 
 // types
 import { StatusProps } from '@/utils/types/StatusProps'
@@ -21,14 +19,9 @@ const HomepageLayout: FC<HomepageLayoutProps> = ({ headerContent }) => {
     <Container>
       <Header 
         updates={headerContent} 
-        title={`Micaelen Miranda`}
       />
 
-      <ImageText />
-
-      <Separator />
-
-      <Footer />
+      <Introduction />
     </Container>
 	);
 };

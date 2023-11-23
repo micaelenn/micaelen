@@ -1,5 +1,6 @@
 // external dependencies
 import React, { FC } from 'react';
+import { DotsThreeOutline } from "@phosphor-icons/react"
 
 // internal dependencies
 import { Component } from './Separator.styles'
@@ -11,8 +12,8 @@ interface SeparatorProps {
 
 const Separator: FC<SeparatorProps> = ({}) => {
   return (
-    <Component className="container">
-      <hr className="conteiner double-border" />
+    <Component>
+      <DotsThreeOutline size={32} weight="fill" />
     </Component>
 	);
 };

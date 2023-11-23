@@ -14,7 +14,7 @@ export const Component = styled.ul`
   }
 
   li {
-    font-size: 14px;
+    font-size: 15px;
 
     &:nth-child(2) {
       &:before,

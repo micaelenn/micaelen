@@ -1,14 +1,11 @@
 const colors = {
-  border: '#322d31',
-  black: '#08080A',
-  white: '#FFF',
-  dark: '#1d1d1d',
-  textDark: '#1d1d1d'
+  black: '#363c41',
+  white: '#FAFAFA',
 }
 
 const fontFamilies = {
-  primary: 'Coustard',
-  secondary: 'Courier Prime',
+  primary: 'Courier Prime',
+  secondary: 'Quicksand Variable',
 }
 
 const medias = {
@@ -20,6 +17,5 @@ const medias = {
   large: '1024px',
   extraLarge: '1200px'
 }
-
 
 export { colors, fontFamilies, medias}

@@ -2,7 +2,8 @@
 import React, { FC } from 'react';
 
 // internal dependencies
-import { Component } from './Footer.styles'
+import { Component, Content } from './Footer.styles'
+import Social from '@/components/Social/Social'
 
 // types
 interface FooterProps {
@@ -12,7 +13,9 @@ interface FooterProps {
 const Footer: FC<FooterProps> = ({}) => {
   return (
     <Component>
-      <span>Footer</span>
+      <Content className="container">
+        <Social />
+      </Content>
     </Component>
 	);
 };

@@ -7,8 +7,13 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  h2, h3 {
+    font-weight: 400;
+  }
+
   body {
-    font-family: ${fontFamilies.secondary}, sans-serif;
+    background-color: ${colors.white};
+    font-family: ${fontFamilies.primary}, sans-serif;
     margin: 0 auto;
     max-width: 1500px;
   }
@@ -20,23 +25,14 @@ const GlobalStyles = createGlobalStyle`
   ul {
     list-style: none;
   }
-
-  .container {
-    margin-left: 20px;
-    margin-right: 20px;
-
-    @media(min-width: ${medias.mediumLarge}) {
-      margin-left: 30px;
-      margin-right: 30px;
-    }
+  
+  p {
+    line-height: 1.3;
   }
 
-  .flex-centralized {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
   }
 `
 

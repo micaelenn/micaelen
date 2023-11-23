@@ -8,7 +8,7 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 70px; 
+  height: 50px; 
 
   @media(min-width: ${medias.extraLarge}) {
     justify-content: start;
@@ -17,10 +17,10 @@ export const List = styled.ul`
   
   li {
     display: none;
-    font-size: 14px;
+    font-size: 15px;
 
     @media(min-width: ${medias.mediumLarge}) {
-      max-width: 430px;
+      max-width: 520px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

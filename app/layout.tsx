@@ -7,8 +7,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 // font-families
 import '@fontsource/courier-prime/400.css';
 import '@fontsource/courier-prime/700.css';
-import '@fontsource/coustard/400.css';
-
+import '@fontsource-variable/quicksand';
 
 export default function RootLayout({
   children,
