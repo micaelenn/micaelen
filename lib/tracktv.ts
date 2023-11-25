@@ -2,7 +2,7 @@ import { revalidate } from '@/utils/config/schemas';
 
 export const getLastWatched = async (type: string) => {
   const response = await fetch(`https://api.trakt.tv/users/micaelenn/history?type=${type}`, {
-    cache: 'no-store',
+  cache: 'no-store',
   next: { revalidate },  
   headers: {
       "Content-Type": "application/json",

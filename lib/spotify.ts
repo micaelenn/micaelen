@@ -5,7 +5,9 @@ const getAccessToken = async () => {
   const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
 
   const response = await fetch("https://accounts.spotify.com/api/token", {
-    method: "POST",
+    cache: 'no-store',
+    next: { revalidate },  
+  method: "POST",
     headers: {
       Authorization: `Basic ${process.env.SPOTIFY_KEYS}`,
       "Content-Type": "application/x-www-form-urlencoded",
