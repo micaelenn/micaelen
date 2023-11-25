@@ -4,3 +4,5 @@ export const schemas = {
     general: 'generalSchema',
     til: 'tilSchema'
 }
+
+export const revalidate = 60
