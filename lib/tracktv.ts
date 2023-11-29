@@ -1,6 +1,6 @@
 export const getLastWatched = async (type: string) => {
   const response = await fetch(`https://api.trakt.tv/users/micaelenn/history?type=${type}`, {
-  cache: 'no-store',  
+    next: { revalidate: 0 },  
   headers: {
       "Content-Type": "application/json",
       "trakt-api-version": "2",

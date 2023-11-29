@@ -10,7 +10,7 @@ export const getGeneralData = async () => {
             socialMedias,
             updates
         }`,
-        { cache: 'no-store' }
+        { next: { revalidate: 0 } }
     )
     
     // dynamic updates

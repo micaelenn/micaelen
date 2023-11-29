@@ -7,7 +7,7 @@ export const getHomepageData = async () => {
         `*[_type=="${schemas.homepage}"][0] {
             introduction
         }`, 
-        { cache: 'no-store' }
+        { next: { revalidate: 0 } }
     )
 
     return homepageData
