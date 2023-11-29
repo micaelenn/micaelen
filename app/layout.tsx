@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic'
-
 // internal dependencies
 import GlobalStyles from '@/styles/globalStyles'
 import StyledComponentsRegistry from '@/lib/registry'
