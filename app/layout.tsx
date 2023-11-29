@@ -27,7 +27,7 @@ export default async function RootLayout({
         <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <Header content={generalData} />
+            <Header content={generalData} />
             {children}
           </StyledComponentsRegistry>
         </body>

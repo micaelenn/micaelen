@@ -14,9 +14,7 @@ import Social from '@/components/Social/Social'
 interface HeaderProps {
   content: {
     updates: StatusProps;
-    social: {
-      socialMedias: SocialMediasProps[]
-    }
+    social: SocialMediasProps[];
   }
 }
 
@@ -24,7 +22,7 @@ const Header: FC<HeaderProps> = ({ content }) => {
   return (
     <Component className="container">
       <Updates status={content.updates} />
-      <Social socialMedias={content.social.socialMedias} />
+      <Social socialMedias={content.social} />
     </Component>
 	);
 };
