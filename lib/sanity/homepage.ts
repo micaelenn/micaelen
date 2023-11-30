@@ -6,8 +6,7 @@ export const getHomepageData= () => {
     const homepageData = client.fetch(
         `*[_type=="${schemas.homepage}"][0] {
             introduction
-        }`, 
-        { next: { revalidate: 0 } }
+        }`
     )
 
     return homepageData

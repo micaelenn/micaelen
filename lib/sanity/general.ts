@@ -9,8 +9,7 @@ export const getGeneralData = async () => {
         `*[_type == "${schemas.general}"][0] {
             socialMedias,
             updates
-        }`,
-        { next: { revalidate: 0 } }
+        }`
     )
     
     // dynamic updates
