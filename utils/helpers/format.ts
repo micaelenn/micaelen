@@ -4,7 +4,16 @@ export function formatTrackInfo(info: any) {
     artist: info.item.artists[0].name
   }
 
-  const trackFormatted = `${track.name} - ${track.artist}`
-  
-  return trackFormatted
+  return `${track.name} - ${track.artist}`
+}
+
+export function formatDateToEnGB(date: string) {
+  const formattedDate = new Date(date).toLocaleString('en-GB', {
+    month: 'short',
+    day: '2-digit',
+    year: 'numeric',
+    timeZone: 'UTC'
+  })
+
+  return formattedDate
 }

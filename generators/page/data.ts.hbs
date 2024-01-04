@@ -1,0 +1,20 @@
+import { client } from '@/utils/config/client'
+import { schemas } from '@/utils/config/schemas'
+
+// {{upperCase elementName}} CONTENT
+export const get{{ pascalCase elementName }}Data = async () => {
+    const {{ camelCase elementName}} = await client.fetch(
+       `*[_type == "${schemas.}"][0]`
+    )
+
+    return {{ camelCase elementName }}
+}
+
+// SEO
+export const getSeo = async () => {
+    const {{ camelCase elementName}}Seo = client.fetch(
+        `*[_type=="${schemas.}"][0]`
+    )
+
+    return {{ camelCase elementName }}Seo
+}

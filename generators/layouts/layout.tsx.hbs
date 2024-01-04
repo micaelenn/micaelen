@@ -1,15 +1,17 @@
+"use client"
+
 // external dependencies
 import React, { FC } from 'react'
 
 // internal dependencies
-import { Container } from './{{elementName}}.styles'
+import { Container } from './{{pascalCase elementName}}.styles'
 
 // types
-interface {{elementName}}LayoutProps {
+interface {{pascalCase elementName}}LayoutProps {
  
 }
 
-const {{elementName}}Layout: FC<{{elementName}}LayoutProps> = ({}) => {
+const {{pascalCase elementName}}Layout: FC<{{pascalCase elementName}}LayoutProps> = (data: any) => {
   return (
     <Container>
         
@@ -17,4 +19,4 @@ const {{elementName}}Layout: FC<{{elementName}}LayoutProps> = ({}) => {
 	);
 };
 
-export default {{elementName}}Layout;
+export default {{pascalCase elementName}}Layout;

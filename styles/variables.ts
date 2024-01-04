@@ -2,7 +2,8 @@ const colors = {
   black: '#000',
   dark: '#363c41',
   white: '#FAFAFA',
-  hover: '#AFC6D0'
+  primary: '#18A999',
+  light: '#FCf4E9'
 }
 
 const fontFamilies = {

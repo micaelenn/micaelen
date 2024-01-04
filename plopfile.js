@@ -25,12 +25,12 @@ module.exports = function (plop) {
                     actions.push(
                         {
                             type: 'add',
-                            path: 'components/{{elementName}}/{{elementName}}.tsx',
+                            path: 'components/{{ pascalCase elementName }}/{{ pascalCase elementName }}.tsx',
                             templateFile: 'generators/components/component.tsx.hbs'
                         },
                         {
                             type: 'add',
-                            path: 'components/{{elementName}}/{{elementName}}.styles.ts',
+                            path: 'components/{{ pascalCase elementName }}/{{ pascalCase elementName }}.styles.ts',
                             templateFile: 'generators/components/component.ts.hbs'
                         }
                     )
@@ -39,12 +39,22 @@ module.exports = function (plop) {
                     actions.push(
                         {
                             type: 'add',
-                            path: 'layouts/{{elementName}}/{{elementName}}.tsx',
+                            path: 'app/{{ kebabCase elementName }}/page.tsx',
+                            templateFile: 'generators/page/page.tsx.hbs'
+                        },
+                        {
+                            type: 'add',
+                            path: 'lib/sanity/{{ kebabCase elementName }}.ts',
+                            templateFile: 'generators/page/data.ts.hbs'
+                        },
+                        {
+                            type: 'add',
+                            path: 'layouts/{{ pascalCase elementName }}/{{ pascalCase elementName }}.tsx',
                             templateFile: 'generators/layouts/layout.tsx.hbs'
                         },
                         {
                             type: 'add',
-                            path: 'layouts/{{elementName}}/{{elementName}}.styles.ts',
+                            path: 'layouts/{{ pascalCase elementName }}/{{ pascalCase elementName }}.styles.ts',
                             templateFile: 'generators/layouts/layout.ts.hbs'
                         }
                     )

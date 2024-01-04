@@ -2,5 +2,6 @@
 export const schemas = {
     homepage: 'homepageSchema',
     general: 'generalSchema',
+    tilPage: 'tilListingSchema',
     til: 'tilSchema'
 }

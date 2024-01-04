@@ -1,7 +1,6 @@
 // external dependencies
 import React, { FC } from 'react';
 import Image from 'next/image'
-import { Code } from "@phosphor-icons/react"
 import { PortableText } from '@portabletext/react'
 
 // internal dependencies
@@ -25,7 +24,6 @@ const Introduction: FC<IntroductionProps> = ({ content }) => {
           <div>
             <Title>
               <h1>{content.title}</h1>
-              <Code size={32} />
             </Title>
 
             <PortableText

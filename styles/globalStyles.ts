@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     color: ${colors.black};
-    background: linear-gradient(to right, ${colors.hover} 50%, transparent 50%);
+    background: linear-gradient(to right, ${colors.primary} 50%, transparent 50%);
     background-size: 205% 100%;
     background-position: right bottom;
     font-weight: 500;
@@ -40,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   p {
+    font-size: 18px;
     line-height: 1.5;
   }
 
