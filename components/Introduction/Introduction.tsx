@@ -5,7 +5,6 @@ import { PortableText } from '@portabletext/react'
 
 // internal dependencies
 import { Component, Content, Title } from './Introduction.styles'
-import Separator from '@/components/Separator/Separator'
 import { getImageURL } from '@/utils/helpers/assets'
 
 // types
@@ -33,7 +32,7 @@ const Introduction: FC<IntroductionProps> = ({ content }) => {
           
           <div>
             <Image 
-              src={getImageURL(content.image).url()}
+              src={getImageURL(content.image)}
               alt={`Profile Picture`}
               loading={`eager`}
               height={250}
@@ -41,8 +40,6 @@ const Introduction: FC<IntroductionProps> = ({ content }) => {
             />
           </div>
         </Content>
-
-        <Separator />
       </Component>
 	)
 }

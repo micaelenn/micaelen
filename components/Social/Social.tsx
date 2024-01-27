@@ -1,25 +1,32 @@
 // external dependencies
-import React, { FC } from 'react';
+import React, { FC } from 'react'
+import Image from 'next/image'
 
 // internal dependencies
 import { Component } from './Social.styles'
-import { SocialMediasProps } from '@/utils/types/SocialMediasProps';
+import { getImageURL } from '@/utils/helpers/assets'
 
 // types
-interface SocialProps {
-  socialMedias: SocialMediasProps[];
-}
+import { SocialProps } from './SocialProps'
 
-const Social: FC<SocialProps> = ({ socialMedias }) => {    
+const Social: FC<SocialProps> = ({ social }) => {      
   return (
-    <Component>
-    {socialMedias.map((item, index) =>
-      <li key={index}>
-        <a href={item.url} target="_blank">
-          {item.name}
-        </a>
-      </li>
-    )}
+    <Component className="container">
+      <ul>
+      {social.medias.map((item, index) =>
+        <li key={index}>
+          <a href={item.url} target="_blank">
+            <Image 
+              src={getImageURL(item.icon)}
+              alt={`${item.name} Logo`}
+              height={22}
+              width={22}
+            />
+            {item.name}
+          </a>
+        </li>
+      )}
+      </ul>
     </Component>
 	);
 };

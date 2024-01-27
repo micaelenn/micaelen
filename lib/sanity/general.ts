@@ -31,7 +31,9 @@ export const getGeneralData = async () => {
             },
         },
         footer: {
-            social: data.socialMedias,
+            social: {
+                medias: data.socialMedias,
+            }
         }
     }
 

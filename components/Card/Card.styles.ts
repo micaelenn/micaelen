@@ -15,8 +15,7 @@ export const Component = styled.div`
     }
 
     &:hover,
-    &:focus,
-    &:focus-within {
+    &:focus {
         h2 {
             color: ${colors.dark};
         }

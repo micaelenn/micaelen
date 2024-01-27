@@ -1,26 +1,23 @@
 import styled from 'styled-components'
-import { medias, fontFamilies } from '@/styles/variables'
+import { colors, medias, fontFamilies } from '@/styles/variables'
 
-export const Component = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 50px;
+export const Component = styled.div`
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 20px;
 
-  li {
-    font-size: 15px;
-
-    &:nth-child(2) {
-      &:before,
-      &:after {
-        content: '-';
-        margin: 0 10px;
+    li {
+      font-size: 16px;
+      
+      a {
+        font-family: ${fontFamilies.secondary};
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
       }
-    }
-    
-    a {
-      font-family: ${fontFamilies.secondary};
     }
   }
 `
