@@ -9,6 +9,16 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  h1 {
+    color: ${colors.dark};
+    font-family: ${fontFamilies.secondary}, sans-serif;
+    font-size: 24px;
+
+    @media(min-width: ${medias.medium}) {
+      font-size: 32px;
+    }
+  }
+
   h2, h3 {
     font-weight: 400;
   }

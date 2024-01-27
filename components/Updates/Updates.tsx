@@ -1,86 +1,48 @@
 // external dependencies
-import React, { FC, useEffect } from 'react'
-
-// internal dependencies
+import React, { FC, useEffect, useState } from 'react'
 import { Component, List } from './Updates.styles'
 import { StatusProps } from '@/utils/types/StatusProps'
 
-// types
 interface UpdatesProps {
-  status: StatusProps;
+  key: string;
+  emoji: string;
+  label: string;
 }
 
 const Updates: FC<UpdatesProps> = ({ status }) => {
-  const showUpdates = () => {
-    const listChildrenArray = Array.from(document.querySelector(".updates")!.children)
+  const [visibleIndex, setVisibleIndex] = useState(0);
 
-    listChildrenArray.forEach((element, index) => {
-      const isFirstChild = (index === 0)
-      const isNotFirstChild = (index >= 1)
-      const isLastChild = (index === listChildrenArray.length - 1)
-
-      const showElement = ( item : any ) => { item.setAttribute('class', 'is-visible') }
-      const hideElement = ( item : any ) => { item.removeAttribute('class') }
-
-      if (isLastChild) {
-        hideElement(element)
-      }
-      
-      if (isFirstChild) {
-        showElement(element)
-      }
-
-      setTimeout(function() {
-        const previousElement = element.previousSibling
-
-        if (isNotFirstChild) {
-          hideElement(previousElement)
-          showElement(element)
-        }
-      }, (index * 5000))
-    })
-  }
-
-  const repeatUpdates = () => {
-    const listChildrenArray = Array.from(document.querySelector(".updates")!.childNodes)
-
-    setInterval(() => {
-      showUpdates()
-    }, (listChildrenArray.length * 5000))
-  }
+  const statusItems = [
+    { key: 'listening', emoji: '🎶', label: 'Listening:' },
+    { key: 'learning', emoji: '📖', label: 'Learning:' },
+    { key: 'watching', emoji: '📺', label: 'Watching:' },
+    { key: 'location', emoji: '📍', label: '' },
+    { key: 'watchedMovie', emoji: '🎬', label: 'Last Movie:' },
+    { key: 'playing', emoji: '🎮', label: 'Playing:' },
+  ];
 
   useEffect(() => {
-    showUpdates()
-    repeatUpdates()
-  });
+    const interval = setInterval(() => {
+      setVisibleIndex((prevIndex) => (prevIndex + 1) % statusItems.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [statusItems.length])
 
   return (
     <Component>
       <List className="updates">
-        {status.listening &&
-          <li className="is-visible">
-            {`🎶 Listening: ${status.listening}`}
+        {statusItems.map((item, index) => (
+          <li
+            key={item.key}
+            className={index === visibleIndex ? 'is-visible' : ''}
+          >
+            {status[item.key] && `${item.emoji} ${item.label} ${status[item.key]}`}
           </li>
-        }
-        {status.learning && 
-          <li>{`📖 Learning: ${status.learning}`}</li>
-        }
-        {status.watching &&
-          <li>{`📺 Watching: ${status.watching}`}</li>
-        }
-        {
-          status.location && 
-          <li>{`📍 ${status.location}`}</li>
-        }
-        {status.watchedMovie && 
-          <li>{`🎬 Last Movie: ${status.watchedMovie}`}</li>
-        }
-        {status.playing && 
-          <li>{`🎮 Playing: ${status.playing}`}</li>
-        }
+        ))}
       </List>
     </Component>
-	);
+  );
 };
 
 export default Updates;

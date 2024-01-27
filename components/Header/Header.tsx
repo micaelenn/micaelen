@@ -6,7 +6,6 @@ import React, { FC } from 'react';
 // internal dependencies
 import { Component } from './Header.styles'
 import { StatusProps } from '@/utils/types/StatusProps';
-import { SocialMediasProps } from '@/utils/types/SocialMediasProps';
 import Updates from '@/components/Updates/Updates'
 import Menu from '@/components/Menu/Menu'
 import { MenuItemProps } from '@/utils/types/MenuItemProps';
@@ -15,7 +14,7 @@ import { MenuItemProps } from '@/utils/types/MenuItemProps';
 interface HeaderProps {
   content: {
     updates: StatusProps;
-    menu:  MenuItemProps[]
+    menu:  MenuItemProps[];
   }
 }
 

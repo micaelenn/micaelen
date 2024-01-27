@@ -10,15 +10,12 @@ export const Component = styled.section`
         background: none;
         color: ${colors.primary};
         font-family: ${fontFamilies.primary};
-        font-size: 30px;
+        font-size: 32px;
         font-weight: 900;
         text-decoration: none;
     }
 
     h1 {
-        color: ${colors.dark};
-        font-size: 30px;
-
         &::before {
             content: ' ~ ';
             color: ${colors.gray};
