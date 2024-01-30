@@ -5,10 +5,10 @@ import React, { FC } from 'react';
 
 // internal dependencies
 import { Component } from './Header.styles'
-import { StatusProps } from '@/utils/types/StatusProps';
 import Updates from '@/components/Updates/Updates'
 import Menu from '@/components/Menu/Menu'
-import { MenuItemProps } from '@/utils/types/MenuItemProps';
+import { MenuItemProps } from '@/utils/types/MenuItemProps'
+import { StatusProps } from '@/utils/types/StatusProps'
 
 // types
 interface HeaderProps {

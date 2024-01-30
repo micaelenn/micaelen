@@ -30,6 +30,11 @@ const GlobalStyles = createGlobalStyle`
     max-width: 1500px;
   }
 
+  main,
+  article {
+    min-height: 500px;
+  }
+
   a {
     color: ${colors.black};
     background: linear-gradient(to right, ${colors.primary} 50%, transparent 50%);

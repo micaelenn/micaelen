@@ -1,5 +1,8 @@
 export interface StatusProps {
-    key: string;
-    emoji: string;
-    label: string;
+  listening: string;
+  learning: string;
+  watching: string;
+  location: string;
+  watchedMovie: string;
+  playing: string;
 }

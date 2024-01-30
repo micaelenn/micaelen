@@ -1,4 +1,4 @@
 export interface SlugProps {
-    current: string;
-    _type: string;
+  current: string;
+  _type: string;
 }

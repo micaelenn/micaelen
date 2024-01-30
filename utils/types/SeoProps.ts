@@ -1,4 +1,4 @@
 export interface SeoProps {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 }

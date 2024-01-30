@@ -1,5 +1,5 @@
 export interface SocialMediasProps {
-    name: string;
-    url: string;
-    icon: object;
+  name: string;
+  url: string;
+  icon: object;
 }

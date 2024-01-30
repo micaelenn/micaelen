@@ -1,5 +1,3 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
-  height: 80vh;
-`
+export const Container = styled.main``

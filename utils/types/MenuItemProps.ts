@@ -1,4 +1,4 @@
 export interface MenuItemProps {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }
