@@ -5,12 +5,12 @@ import GlobalStyles from '@/styles/globalStyles'
 import StyledComponentsRegistry from '@/lib/registry'
 
 // font-families
-import '@fontsource/courier-prime/400.css'
-import '@fontsource/courier-prime/700.css'
-import '@fontsource-variable/quicksand'
+import '@fontsource/courier-prime/400.css';
+import '@fontsource/courier-prime/700.css';
+import '@fontsource-variable/geist-mono';
 
 import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
+import Menu from '@/components/Menu/Menu'
 import { getGeneralData } from '@/lib/sanity/general'
 
 export default async function RootLayout({
@@ -20,7 +20,7 @@ export default async function RootLayout({
 }) {
   const generalData = await getGeneralData()
   const headerData = generalData.header
-  const footerData = generalData.footer
+  const menuData = generalData.menu
 
   return (
     <>
@@ -30,7 +30,7 @@ export default async function RootLayout({
           <GlobalStyles />
             <Header content={headerData} />
             {children}
-            <Footer content={footerData} />
+            <Menu menu={menuData} />
           </StyledComponentsRegistry>
         </body>
       </html>

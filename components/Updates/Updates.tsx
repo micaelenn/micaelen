@@ -12,7 +12,7 @@ interface UpdatesProps {
   status: StatusProps;
 }
 
-const Updates: FC<UpdatesProps> = ({ status }) => {
+const Updates: FC<UpdatesProps> = ({ status }) => {  
   const [visibleIndex, setVisibleIndex] = useState<number>(0)
 
   const statusItems: StatusItem[] = [
@@ -22,6 +22,7 @@ const Updates: FC<UpdatesProps> = ({ status }) => {
     { key: 'location', emoji: '📍', label: '' },
     { key: 'watchedMovie', emoji: '🎬', label: 'Last Movie:' },
     { key: 'playing', emoji: '🎮', label: 'Playing:' },
+    { key: 'version', emoji: '👾', label: 'Version:' },
   ]
 
   useEffect(() => {

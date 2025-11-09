@@ -1,28 +1,29 @@
 "use client"
 
 // external dependencies
-import React, { FC } from 'react';
+import React, { FC } from 'react'
+import Link from 'next/link'
 
 // internal dependencies
 import { Component } from './Header.styles'
 import Updates from '@/components/Updates/Updates'
-import Menu from '@/components/Menu/Menu'
-import { MenuItemProps } from '@/utils/types/MenuItemProps'
 import { StatusProps } from '@/utils/types/StatusProps'
 
 // types
 interface HeaderProps {
   content: {
+    title: string;
     updates: StatusProps;
-    menu:  MenuItemProps[];
   }
 }
 
-const Header: FC<HeaderProps> = ({ content }) => {  
+const Header: FC<HeaderProps> = ({ content }) => {    
   return (
     <Component className="container">
+      <Link href={'/'}>
+        <h1>{content.title}</h1>
+      </Link>
       <Updates status={content.updates} />
-      <Menu menu={content.menu} />
     </Component>
 	);
 };

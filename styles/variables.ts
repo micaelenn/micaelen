@@ -3,14 +3,15 @@ const colors = {
   dark: '#363c41',
   white: '#FFF',
   alabaster: '#FAFAFA',
-  gray: '#6c737B',
-  primary: '#406E8E',
+  gray: '#4b5563',
+  primary: '#fca311',
   light: '#FCf4E9',
-  hover: '#B8DBD9'
+  hover: '#B8DBD9',
+  border: '#e5e7eb'
 }
 
 const fontFamilies = {
-  primary: 'Quicksand Variable',
+  primary: 'Geist Mono Variable',
   secondary: 'Courier Prime',
 }
 

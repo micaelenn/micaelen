@@ -8,7 +8,6 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 50px; 
 
   @media(min-width: ${medias.extraLarge}) {
     justify-content: start;

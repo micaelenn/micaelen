@@ -5,4 +5,5 @@ export interface StatusProps {
   location: string;
   watchedMovie: string;
   playing: string;
+  version: string;
 }

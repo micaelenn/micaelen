@@ -1,3 +1,5 @@
+'use client'
+
 // external dependencies
 import React, { FC } from 'react'
 import Link from 'next/link'
@@ -14,13 +16,15 @@ interface MenuProps {
 const Menu: FC<MenuProps> = ({ menu }) => {
   return (
     <Component>
-    {menu.map((item, index) =>
-      <li key={index}>
-        <Link href={item.url}>
-          {item.name}
-        </Link>
-      </li>
-    )}
+      <ul>
+        {menu.map((item, index) =>
+          <li key={index}>
+            <Link href={item.url}>
+              <div dangerouslySetInnerHTML={{ __html: item.icon }} />
+            </Link>
+          </li>
+        )}
+      </ul>
     </Component>
 	);
 };

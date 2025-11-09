@@ -1,30 +1,42 @@
 import styled from 'styled-components'
 import { colors, fontFamilies, medias } from '@/styles/variables'
 
-export const Component = styled.ul`
+export const Component = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 50px;
 
-  @media(min-width: ${medias.extraLarge}) {
-    justify-content: end;
-    text-align: left;
+  a {
+    color: ${colors.black};
+
+    &:hover {
+      color: ${colors.primary};
+    }
   }
 
-  li {
-    font-size: 16px;
+  svg {
+    transform: translateY(0); 
+    transition: transform 0.3s ease-out; 
+    height: 24px;
+    width: 24px;
 
-    &:nth-child(1) {
-        &:after {
-        content: '-';
-        margin: 0 10px;
-      }
+    &:hover, 
+    &:focus,
+    &:focus-within {
+      transform: translateY(-4px);
     }
+  }
 
-    a {
-      font-family: ${fontFamilies.secondary};
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    height: 50px;
+
+    @media(min-width: ${medias.extraLarge}) {
+      justify-content: end;
+      text-align: left;
     }
   }
 `

@@ -10,13 +10,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    color: ${colors.dark};
+    color: ${colors.black};
     font-family: ${fontFamilies.secondary}, sans-serif;
-    font-size: 24px;
-
-    @media(min-width: ${medias.medium}) {
-      font-size: 32px;
-    }
+    font-size: 22px;
+    font-weight: 500;
   }
 
   h2, h3 {
@@ -35,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 500px;
   }
 
-  a {
+  /* a {
     color: ${colors.black};
     background: linear-gradient(to right, ${colors.hover} 50%, transparent 50%);
     background-size: 205% 100%;
@@ -47,19 +44,19 @@ const GlobalStyles = createGlobalStyle`
       background-position: left bottom;
       transition: background 0.25s ease;
     }
-  }
+  } */
 
   ul {
     list-style: none;
   }
   
   p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 2;
   }
 
   .container {
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
   }

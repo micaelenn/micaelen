@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fontsource-variable/quicksand": "^5.0.15",
-    "@fontsource/courier-prime": "^5.0.17",
+    "@fontsource-variable/geist-mono": "^5.2.7",
+    "@fontsource/courier-prime": "^5.2.8",
     "@phosphor-icons/react": "^2.0.14",
     "@portabletext/react": "^3.0.11",
     "next": "14.0.1",
