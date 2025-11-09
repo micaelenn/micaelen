@@ -5,7 +5,8 @@ export const Component = styled.div`
   background-color: ${colors.alabaster};
   position: fixed;
   width: 100%;
-  bottom: 20px;
+  bottom: 0;
+  padding: 5px 0;
   display: flex;
   justify-content: center;
 

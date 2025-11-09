@@ -7,14 +7,14 @@ import Pill from '@/components/Pill/Pill'
 
 // types
 interface PillListProps {
-  title: string;
+  title?: string;
   items: string[]
 }
 
-const PillList: FC<PillListProps> = ({ title, items }) => {
+const PillList: FC<PillListProps> = ({ title, items }) => {  
   return (
     <Component>
-      <h2>{title}</h2>
+      {title ? <h2>{title}</h2> : null}
 
       <List>
         {items.map((item, index) => 

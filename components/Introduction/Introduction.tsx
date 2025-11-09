@@ -4,16 +4,12 @@ import { PortableText } from '@portabletext/react'
 
 // internal dependencies
 import { Component, Content } from './Introduction.styles'
-import PillList from '@/components/PillList/PillList';
+import PillList from '@/components/PillList/PillList'
+import { IntroProps } from '@/utils/types/IntroProps'
 
 // types
 interface IntroductionProps {
-  content: {
-    image: object;
-    title: [];
-    description: [];
-    stack: string[]
-  }
+  content: IntroProps;
 } 
 
 const Introduction: FC<IntroductionProps> = ({ content }) => {  

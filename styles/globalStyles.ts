@@ -52,7 +52,7 @@ const GlobalStyles = createGlobalStyle`
   
   p {
     font-size: 16px;
-    line-height: 2;
+    line-height: 1.7;
   }
 
   .container {

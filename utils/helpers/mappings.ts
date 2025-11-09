@@ -13,7 +13,7 @@ export function formatTrackInfo(info: any) { // TODO: review typing
 export const formatNotesData = (data: PostProps) => {
   return Object.values(data).map(item => ({
     title: item.title,
-    slug: item.slug?.current,
+    slug: `notes/${item.slug?.current}`,
     image: item.thumbnail,
     updatedAt: formatDateToEnGB(item._updatedAt),
     excerpt: item.excerpt,
