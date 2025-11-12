@@ -6,15 +6,19 @@ export const Component = styled.div`
   position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 5px 0;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
 
   a {
     color: ${colors.black};
+  } 
 
-    &:hover {
-      color: ${colors.primary};
+  .current {
+    .icon {
+      background-color: ${colors.primary};
+      display: flex;
+      padding: 2px;
     }
   }
 

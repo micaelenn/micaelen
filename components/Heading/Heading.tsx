@@ -11,24 +11,15 @@ import { getImageURL } from '@/utils/helpers/assets'
 interface HeadingProps {
   title: string;
   description: string;
-  image: [];
-  updatedAt: string;
+  image: object;
 }
 
-const Heading: FC<HeadingProps> = ({title, description, image, updatedAt }) => {
+const Heading: FC<HeadingProps> = ({title, description, image}) => {
   return (
     <Component>
-       {/*  <Image 
-          src={getImageURL(image)}
-          alt={title}
-          loading={`eager`}
-          height={200}
-          width={200}
-        /> */}
         <img src={getImageURL(image)} />
 
         <div>
-          {/* <time>{updatedAt}</time> */}
           <h1>{title}</h1>
           <p>{description}</p>
         </div>

@@ -7,10 +7,10 @@ import { getMediaInformation } from '@/lib/tracktv'
 export const getGeneralData = async () => {
     const data = await client.fetch(
         `*[_type == "${schemas.general}"][0] {
-            socialMedias,
-            title,
-            updates, 
-            menu
+          socialMedias,
+          title,
+          updates, 
+          menu
         }`
     )
 

@@ -9,6 +9,28 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  .link {
+    color: ${colors.black};
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+    padding: 10px 15px;
+    position: relative;
+    background-image: linear-gradient(${colors.primary}, ${colors.primary});
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    background-position: bottom center;
+    transition: background-size 0.35s ease;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-size: 100% 100%;
+    }
+  }
+
   h1 {
     color: ${colors.black};
     font-family: ${fontFamilies.secondary}, sans-serif;
@@ -31,20 +53,6 @@ const GlobalStyles = createGlobalStyle`
   article {
     min-height: 500px;
   }
-
-  /* a {
-    color: ${colors.black};
-    background: linear-gradient(to right, ${colors.hover} 50%, transparent 50%);
-    background-size: 205% 100%;
-    background-position: right bottom;
-    font-weight: 500;
-    outline: none;
-
-    &:hover {
-      background-position: left bottom;
-      transition: background 0.25s ease;
-    }
-  } */
 
   ul {
     list-style: none;

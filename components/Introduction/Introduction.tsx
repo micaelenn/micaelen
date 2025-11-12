@@ -22,10 +22,12 @@ const Introduction: FC<IntroductionProps> = ({ content }) => {
             />
           </div>
           
-          <PillList 
-            title={`Skills & Technologies`} 
-            items={content.stack} 
-          />
+          {content.stack ? 
+            <PillList 
+              title={`Skills & Technologies`} 
+              items={content.stack} 
+            />
+          : null}
         </Content>
       </Component>
 	)

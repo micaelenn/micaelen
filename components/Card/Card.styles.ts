@@ -9,8 +9,6 @@ export const Component = styled.div`
     color: ${colors.black};
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
-    transition: all 0.2s ease 0s;
   }
 
   p {
@@ -29,8 +27,8 @@ export const Component = styled.div`
 
   &:hover,
   &:focus {
-    h2, svg {
-      color: ${colors.primary};
+    .title {
+      background-size: 100% 100%;
     }
   }
 
@@ -41,8 +39,19 @@ export const Component = styled.div`
 `
 
 export const Title = styled.div`
-  display: flex;
-  gap: 10px;  
+  color: ${colors.black};
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 10px;
+  position: relative;
+  background-image: linear-gradient(${colors.primary}, ${colors.primary});
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: bottom center;
+  transition: background-size 0.35s ease;
+  margin-bottom: 15px;
 
   svg {
     color: ${colors.gray};

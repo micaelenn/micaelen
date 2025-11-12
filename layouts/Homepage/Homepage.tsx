@@ -10,15 +10,13 @@ import { IntroProps } from '@/utils/types/IntroProps'
 
 // types
 interface HomepageLayoutProps {
-  data: {
-    introduction: IntroProps;
-  }
+  data: IntroProps;
 }
 
-const HomepageLayout: FC<HomepageLayoutProps> = ({ data }) => { 
+const HomepageLayout: FC<HomepageLayoutProps> = ({ data }) => {   
   return (
     <Container className="container">
-      <Introduction content={data.introduction} />
+      <Introduction content={data} />
     </Container>
 	);
 };

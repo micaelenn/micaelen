@@ -2,14 +2,15 @@ export const dynamic = 'force-dynamic'
 
 // internal dependencies
 import {{ pascalCase elementName }}Layout from "@/layouts/{{ pascalCase elementName }}/{{ pascalCase elementName }}";
-import { getSeo, get{{ pascalCase elementName }}Data } from "@/lib/sanity/{{ kebabCase elementName }}";
+import { get{{ pascalCase elementName }}Data } from "@/lib/sanity/{{ kebabCase elementName }}";
+import { getSeo } from "@/lib/sanity/seo"
 
 export async function generateMetadata() {
-  const seo = await getSeo()
+  const seo = await getSeo('{{ lowerCase elementName }}')
 
   return {
-    title: seo.{{ camelCase elementName }}.title,
-    description: seo.{{ camelCase elementName }}.description
+    title: seo.title,
+    description: seo.description
   }
 }
 

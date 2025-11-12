@@ -4,10 +4,9 @@ const colors = {
   white: '#FFF',
   alabaster: '#FAFAFA',
   gray: '#4b5563',
-  primary: '#fca311',
+  primary: '#B8DBD9',
   light: '#FCf4E9',
-  hover: '#B8DBD9',
-  border: '#e5e7eb'
+  border: '#e5e7eb',
 }
 
 const fontFamilies = {

@@ -14,12 +14,14 @@ interface ListingProps {
 const Listing: FC<ListingProps> = ({ posts }) => {  
   return (
     <Component>
-      {posts.map((post, index) =>
-        <Card
-          key={index}
-          info={post}
-        />
-      )}
+      {posts ? 
+        posts.map((post, index) =>
+          <Card
+            key={index}
+            info={post}
+          />
+        )
+      : null}
     </Component>
 	);
 };

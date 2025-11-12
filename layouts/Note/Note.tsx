@@ -16,15 +16,15 @@ interface NoteLayoutProps {
 }
 
 const NoteLayout: FC<NoteLayoutProps> = ({ data }) => {
-  const { title, excerpt, image, updatedAt, content } = data
+  const { title, excerpt, thumbnail, createdAt, content } = data
   
   return (
     <Container className="container">
       <Heading 
         title={title} 
         description={excerpt}
-        image={image}
-        updatedAt={updatedAt}
+        image={thumbnail}
+        createdAt={createdAt}
       />
 
        <PortableText

@@ -1,6 +1,7 @@
 'use client'
 
 // external dependencies
+import { usePathname } from 'next/navigation';
 import React, { FC } from 'react'
 import Link from 'next/link'
 
@@ -14,13 +15,16 @@ interface MenuProps {
 }
 
 const Menu: FC<MenuProps> = ({ menu }) => {
+  const pathname = usePathname()
+  const firstPath = `/${pathname.split('/')[1]}` 
+
   return (
     <Component>
       <ul>
         {menu.map((item, index) =>
-          <li key={index}>
+          <li key={index} className={firstPath === item.url ? 'current' : ''}>
             <Link href={item.url}>
-              <div dangerouslySetInnerHTML={{ __html: item.icon }} />
+              <div className="icon" dangerouslySetInnerHTML={{ __html: item.icon }} />
             </Link>
           </li>
         )}

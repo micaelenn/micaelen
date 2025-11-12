@@ -1,13 +1,14 @@
 // external dependencies
 import { getNoteData } from '@/lib/sanity/note'
 import NoteLayout from '@/layouts/Note/Note'
+import { getNoteSeo } from '@/lib/sanity/notes'
 
-export async function generateMetadata() {
-  // const seo = await getSeo()
-  
+export async function generateMetadata() {  
+  const seo = await getNoteSeo()
+
   return {
-    title: 'note',
-    description: 'Teste',
+    title: `${seo.title} | Micaelen Miranda`,
+    description: seo.excerpt,
   }
 }
 
