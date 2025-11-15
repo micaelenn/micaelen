@@ -15,6 +15,6 @@ export default async function About() {
   const aboutData = await getAboutData()
 
   return (
-    <AboutLayout {...aboutData} />
+    <AboutLayout data={aboutData} />
   )
 }

@@ -4,8 +4,13 @@ import { colors, medias } from '@/styles/variables'
 export const Component = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 35px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+
+  @media (min-width: ${medias.landscape}) {
+    flex-direction: row;
+  }
 
   img {
     filter: grayscale(100%);
@@ -21,7 +26,7 @@ export const Component = styled.div`
 
   p {
     font-size: 14px;
-    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
   time {

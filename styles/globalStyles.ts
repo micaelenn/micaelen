@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     justify-content: center;
     text-decoration: none;
     gap: 10px;
-    padding: 10px 15px;
+    padding: 5px 15px;
     position: relative;
     background-image: linear-gradient(${colors.primary}, ${colors.primary});
     background-repeat: no-repeat;
