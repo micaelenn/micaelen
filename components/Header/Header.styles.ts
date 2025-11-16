@@ -7,6 +7,7 @@ export const Component = styled.header`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  height: 72px;
   margin-bottom: 40px;
   padding: 25px;
 

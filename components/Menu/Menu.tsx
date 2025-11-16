@@ -25,6 +25,7 @@ const Menu: FC<MenuProps> = ({ menu }) => {
           <li key={index} className={getMainPath(pathname) === item.url ? 'current' : ''}>
             <Link className="icon" href={item.url}>
               <div dangerouslySetInnerHTML={{ __html: item.icon }} />
+              <span>{item.name}</span>
             </Link>
           </li>
         )}

@@ -18,6 +18,11 @@ export const Component = styled.div`
     height: 24px;
     width: 24px;
 
+    span {
+      position: absolute;
+      visibility: hidden;
+    }
+
     &:hover, 
     &:focus,
     &:focus-within {
