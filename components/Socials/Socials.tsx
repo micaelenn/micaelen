@@ -1,9 +1,11 @@
 // external dependencies
 import React, { FC } from 'react'
+import { motion } from "framer-motion";
 
 // internal dependencies
 import { Component } from './Socials.styles'
 import { SocialMediasProps } from '@/utils/types/SocialMediasProps';
+import { parentVariants, childrenVariants } from '@/styles/animations'
 
 // types
 interface SocialsProps {
@@ -12,12 +14,21 @@ interface SocialsProps {
 
 const Socials: FC<SocialsProps> = ({ socials }) => {
   return (
-    <Component>
+    <Component
+      variants={parentVariants}
+      initial="hidden"
+      animate="visible">
         {socials.map((social, index) =>
-          <a key={index} className="link" href={social.url} target='_blank'>
+          <motion.a 
+            key={index} 
+            className="link" 
+            href={social.url} 
+            target='_blank' 
+            variants={childrenVariants}
+          >
             <div dangerouslySetInnerHTML={{ __html: social.icon }} />
             <p>{social.name}</p>
-          </a>
+          </motion.a>
         )}
     </Component>
 	);

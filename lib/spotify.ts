@@ -37,7 +37,6 @@ const getCurrentlyPlaying = async () => {
   return await defaulFetchRequest(endpoint)
 }
 
-
 const getLatestTopTrack = async () => { 
   const endpoint = "https://api.spotify.com/v1/me/top/tracks?limit=1&time_range=short_term"
   return await defaulFetchRequest(endpoint)

@@ -3,10 +3,12 @@
 // external dependencies
 import React, { FC } from 'react'
 import { PortableText } from '@portabletext/react'
+import { motion } from "framer-motion";
 
 // internal dependencies
 import { Container } from './About.styles'
 import { ProjectProps } from '@/utils/types/ProjectProps'
+import { parentVariants, childrenVariants } from '@/styles/animations'
 
 // types
 interface AboutLayoutProps {
@@ -19,10 +21,18 @@ interface AboutLayoutProps {
 
 const AboutLayout: FC<AboutLayoutProps> = ({ data }) => {
   return (
-    <Container className="container portable-text">
-      <PortableText
-        value={data.description}
-      /> 
+    <Container className="container">
+      <motion.div
+        variants={parentVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={childrenVariants}>
+          <PortableText
+            value={data.description}
+          /> 
+        </motion.div>
+      </motion.div>
     </Container>
 	);
 };

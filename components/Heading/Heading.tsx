@@ -19,15 +19,20 @@ interface HeadingProps {
 const Heading: FC<HeadingProps> = ({title, description, createdAt, image}) => {
   return (
     <Component>
-        <img src={getImageURL(image)} />
+      <img 
+        src={getImageURL(image)} 
+        alt={title}
+        height={92}
+        width={120}
+      />
 
-        <div>
-          <h1>{title}</h1>
-          <p>{description}</p>
-          <time>
-            {formatDateToEnGB(createdAt)}
-          </time>
-        </div>
+      <div>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <time>
+          {formatDateToEnGB(createdAt)}
+        </time>
+      </div>
     </Component>
 	);
 };

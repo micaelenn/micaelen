@@ -1,10 +1,12 @@
 // external dependencies
 import React, { FC } from 'react'
+import { motion } from "framer-motion";
 
 // internal dependencies
 import { Component } from './Listing.styles'
 import { PostProps } from '@/utils/types/PostProps'
 import Card from '@/components/Card/Card'
+import { parentVariants, childrenVariants } from '@/styles/animations'
 
 // types
 interface ListingProps {
@@ -13,13 +15,18 @@ interface ListingProps {
 
 const Listing: FC<ListingProps> = ({ posts }) => {  
   return (
-    <Component>
+    <Component
+      variants={parentVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {posts ? 
         posts.map((post, index) =>
-          <Card
-            key={index}
-            info={post}
-          />
+          <motion.div key={index} variants={childrenVariants}>
+            <Card
+              info={post}
+            />
+          </motion.div>
         )
       : null}
     </Component>

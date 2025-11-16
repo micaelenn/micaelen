@@ -5,19 +5,13 @@ import React, { FC } from 'react'
 
 // internal dependencies
 import { Component } from './Footer.styles'
-import { SocialProps } from '@/components/Social/SocialProps'
-import Social from '@/components/Social/Social'
 
 // types
-interface FooterProps {
-  content: SocialProps
-}
+interface FooterProps {}
 
-const Footer: FC<FooterProps> = ({ content }) => {    
+const Footer: FC<FooterProps> = ({}) => {    
   return (
-    <Component className="container">
-      <Social social={content.social} />
-    </Component>
+    <Component className="container"></Component>
 	)
 }
 
