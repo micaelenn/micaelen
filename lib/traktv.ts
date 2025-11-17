@@ -1,9 +1,9 @@
 export const getLastWatched = async (type: string) => {
-  const response = await fetch(`https://api.trakt.tv/users/micaelenn/history?type=${type}`, { 
+  const response = await fetch(`https://api.trakt.tv/users/micaelennn/history?type=${type}`, { 
   headers: {
       "Content-Type": "application/json",
       "trakt-api-version": "2",
-      "trakt-api-key": `${process.env.TRACKT_CLIENT_ID}`
+      "trakt-api-key": `${process.env.TRAKT_CLIENT_ID}`
     },
   });
 

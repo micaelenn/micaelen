@@ -1,7 +1,7 @@
 import { client } from '@/utils/config/client'
 import { schemas } from '@/utils/config/schemas'
 import { getTrackInformation } from '@/lib/spotify'
-import { getMediaInformation } from '@/lib/tracktv'
+import { getMediaInformation } from '@/lib/traktv'
 
 // GENERAL CONTENT
 export const getGeneralData = async () => {
