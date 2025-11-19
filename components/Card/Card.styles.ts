@@ -33,7 +33,8 @@ export const Component = styled.div`
     }
   }
 
-  time {
+  time,
+  span {
     color: ${colors.dark};
     font-size: 14px;
   };
@@ -66,4 +67,10 @@ export const Topics = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0;
+`
+
+export const Info = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
 `

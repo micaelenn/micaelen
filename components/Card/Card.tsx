@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 
 // internal dependencies
-import { Component, Topics, Title } from './Card.styles'
+import { Component, Topics, Title, Info } from './Card.styles'
 import { PostProps } from '@/utils/types/PostProps';
 import Pill from '@/components/Pill/Pill';
 import { formatDateToEnGB } from '@/utils/helpers/string';
@@ -34,9 +34,13 @@ const Card: FC<CardProps> = ({ info }) => {
         : null}
       </Topics>
 
-      <time>
-        {formatDateToEnGB(info.createdAt)}
-      </time>
+      <Info>
+        <time>
+          {formatDateToEnGB(info.createdAt)}
+        </time>
+
+        <span>{`Read More →`}</span>
+      </Info>
 
       <Link href={`${info.slug}`}>
         {info.title}

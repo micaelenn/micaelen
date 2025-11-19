@@ -7,10 +7,11 @@ export const Component = styled.header`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  gap: 10px;
   margin-bottom: 40px;
   padding: 25px;
 
-  @media(min-width: ${medias.medium}) {
+  @media(min-width: ${medias.landscape}) {
     flex-direction: row;
     gap: 20px;
   }
