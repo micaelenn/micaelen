@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@fontsource/courier-prime": "^5.2.8",
+    "@micaelen/lazyenv": "^1.0.0",
     "@phosphor-icons/react": "^2.0.14",
     "@portabletext/react": "^3.0.11",
     "motion": "^12.23.24",
